@@ -1,2 +1,7 @@
-# CS461-Group20
-Senior Captstone Project - Group 20
+# Mixed Reality for Infrastructure Maintanance
+
+## Client 
+Yelda Turkan - Oregon State University
+
+## Description
+
