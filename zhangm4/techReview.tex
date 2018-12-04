@@ -1,0 +1,128 @@
+
+\documentclass[10pt,letter paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[cm]{fullpage}
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\usepackage[singespacing]{setspace}
+\usepackage[T1]{fontenc}
+\usepackage[]{graphicx}
+\usepackage[]{listings}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{titlesec}
+\usepackage{latexsym}
+\usepackage{enumerate}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+  
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\vspace{8cm}
+	{\scshape\huge Team 20: Mixed Reality for Infrastructure Maintenance \par}
+	\vspace{2cm}
+	{\scshape\itshape The article contains the overview of the project and some techniques use in data management including data format, database, and user input\par}
+	\vspace{1.5cm}
+	{\scshape\Large CS 461 Fall 2018\par}
+	\vspace{1.5cm}
+	{\Large\itshape Mingyu Zhang\par}
+	\vspace{1.5cm}
+
+
+	{\large \today\par}
+\end{titlepage}
+
+\section*{About } 
+The aim of the project is to write a Mixed Reality (MR) application to help to build structure analyzing. In the screen of a display device, the application would overwrite the view of a given building and shows additional information about the building to designers or other users to help their work, also the file used in the application should be able to upload, download and shared from a data storage. \newline
+\noindent
+\newline
+The content below is about data management part of the project, include correct file format for Building Information Model (BIM), file management and data handling on user side.
+
+\section{File Format}
+The file format defines how data list in a file and which element it contained.  MR application heavily relies on data to simulate “fake” reality and selecting a good file format would be crucial to success the project since it decides how the data is accessed. Also, the project is designed for average architecture designer and the file format should be commonly used amount them. \newline
+\noindent
+\newline
+For the project. the file format should: 1) The data is well organized and easy to access. 2) The file only contains relevant data. 3) The file is used in major construction modeling software like Autodesk. 
+
+\subsection{Industry Foundation Classes}
+Industry Foundation Classes (IFC for short) describes how to represent buildings and infrastructure in a digital Format. It is an object-orientated format, in an IFC file, it first describes individual components as an object, like a piece of a building, a wall, then describes the relationship between each component, like connection, embedding, intersection, and many others. Those relations are designed to analyze structural systems, mechanical systems, and transportation systems, but needed to make 3d graphics too. Also, the file is easy to share with others and users can decide what they want to share within an IFC file. [1]\newline
+\noindent
+\newline
+Beside geometry information like position, the file format describes how a facility is used, what it looks like, how it is constructed, how it is operated and others. The additional information may be helpful in other fields, but in the project, many of them are unnecessary and using a file containing such information may cause an error to the project.\newline
+\noindent
+\newline
+For the object, IFC is ideal for the project since it contains all necessary information and wildly used in the construction process, but the project only needs the geometry information and relation between objects to simulate 3d object, and IFC seems too heavier. Below there will talk about a subset of IFC that is more suitable for the project.
+\subsection{OBJ}
+OBJ (or .OBJ) is a geometry information file format first developed by Wavefront Technologies. The OBJ file format is a file format only has needed data to represent 3D object including the vertex position ST position, surface normal, the connection in polygons, and texture file. [2]\newline
+\noindent
+\newline
+.obj format is a lightweight 3d model format and it only contains the necessary information to build a 3d model and it is wildly used in 3d graphics. But most Building information model (BIM) is not in the format and translating exist BIM to obj format would cause lots of unneeded work.
+\subsection{Subset of IFC}
+IFC is wildly used in by architecture designing and most building model software uses this format, but it contains too much unnecessary information to make graphics. For the project, select partial information form IFC would be ideal. Like the Construction Operations Building Information Exchange (COBie), a subset of building information models (BIM) mainly used in data analysis, which is distinct from geometric information. The project could adopt the idea and select only needed data, like geometric information, to form a new file for the application.
+
+\section{File Management}
+In the file management part, it should manage the 3d object file updated by the user and should have functionalities including update existing file, download the new file, and share files to specific people or group. Also, it should support file operation such as searching, deleting, and showing the detail and/or the history of a file. And all those operations should be done by users in the interface of the application, additional operation like linking to storage location should be down in the background of the application.\newline
+\noindent
+\newline
+To measure the success, the application should: 1) Allowing the user upload/download files quickly and easily. 2) No other applications needed during file managing operation. 3) Able to share a file with a specific people or group. 4) File storage is easy to manipulate by code.
+
+\subsection{Autodesk BIM 360}
+The first option is Autodesk BIM 360. Autodesk is one of few constructions modeling software existed in the market and used by the majority of architecture designer. BIM 360 is the database associated with it to manage cloud-based file operation from a user. BIM 360 is a unified platform that could let users connect project data in real-time and support collaboration, documentation, and review during a work-flow. BIM 360 also supports to share files and data amount people or group and lets users be more involved in the work-flow. [3]\newline
+\noindent
+\newline
+Autodesk BIM 360 is designed for construction usage and compatible for IFC format, which could be used to
+store 3d building model. It also supports all the file operations needed by the project. But those functions could only be used in the Autodesk application, for the project, it is better to implement a different version of file management.
+
+\subsection{MongoDB}
+MongoDB is one of the wildly used databases and it allows to easily organize, use and enrich data in any time and anywhere, it also has flexible document data model which makes working with data intuitive regardless what operation may undergo. MongoDB has precisely control where data is placed globally so the user can easily ensure fast performance anywhere and compliance with regulations. [4]\newline
+\noindent
+\newline
+Based on the current understanding of the project, MongoDB would be the best choice. The project doesn’t need to manage a lot of data for new, so it would be easy to build an own database, also MongoDB is easy to use when implementing an application and it is compatible with the application.
+
+\subsection{Google Drive}
+Google Drive is a file storage application and it offers a synchronization service amount different devices and users. It allows to add and synchronize files on their servers, and users are able to share their file with others. The application supports multiple platforms and systems including Windows, macOS, Android and it is adaptable in multiple devices like smart phones and tablets. [5]\newline
+\noindent
+\newline
+Most devices like laptop and tablet could install Google Drive, which is the potential device for the project, and users could easily manage their files and do other file operation through It, as described above. But it is hard to show the same file with the history which would be useful when working with others. Also, file operation is through another application gives less control when making application and there may be potential barriers when try to collaborate it in the project.
+
+\section{Generated Data}
+Besides building the 3d model, the application needs to store/track information entered by the user, like the material of a build,  and display it later with other entered data. This means the application should keep track of newly added information entered by user beside geometrical information of the model, like material, structure, and history of the building. Also, the application should organize the newly added information in a structured format, so it could display to the user later in a comfortable way. There are several ways to organize those files, based on time, type, and relation, and the quality of the organization should be decided by 1) The display is informative. 2) The information is easy to read.
+
+\subsection{Organized by time}
+Organize information by time is an easy way to sort information, and it could offer additional benefit besides showing the entered information. It could show the different version of the model along the history and keep track of the newest status. And each entered information can be treated as a log individually, and those would be easier when merging two same objects from different users or with a different history.\newline
+\noindent
+\newline
+But this would slow down the system when accessing those data and it seems mussy when displaying it to the
+user. So, this is not the primary option.
+
+\subsection{Organized by type}
+Organize information by type implements a structure to the information and make the user easy to receive when there is a large amount of information. Also, users could quickly select target data when they need, and this information is displayed in MR devices which could display it in a different window and make the data more informative. And this organizing could combine with organizing by time, each type of data would be displayed based on the sequence of time and gives the user more information in a short time.
+
+\subsection{Organized by the relationship}
+For a building, each information of it may not be independent, and just showing a list of data makes it hard to understand a building’s design. Showing a list of data based on their relationship and in a graph-like structure would be a better way to display the data and make it informative. Also, since it is in MR, showing data with some structure would be the best way to take advantage of it for the information is shown in 3d format.\newline
+\noindent
+\newline
+But constructing the relationship requires more input from the user and could easily go wrong if the user makes mistake. Since it is an MR application, a structured information display would be ideal, and it is pretty cool to show thing in this way.
+
+\section*{Summary}
+For manage data, use a subset format from IFC would be best for the project since it is simple and compatible for any construction design and file management may use MongoDB as a file store and doing other file operation, also entered information from the user would be sorted based on the relationship and display it to the user in a 3d structure.
+
+\pagebreak
+\section*{Citation:}
+[1] “Industry Foundation Classes Technical resources for software developers,” buildSmart. [Online]. 
+Available: http://www.buildingsmart-tech.org/ifc/  \newline 
+[2] “Wavefront .obj file,” Wikipedia, 27-Oct-2018. [Online]. Available:https://en.wikipedia.org/wiki/Wavefront$_.obj_$file. \newline
+[3] “Construction Management Software,” Autodesk BIM 360. [Online]. Available: https://bim360.autodesk.com/ \newline
+[4] “MongoDB for GIANT Ideas,” MongoDB. [Online]. Available: https://www.mongodb.com/ \newline
+[5] “Google Drive,” Wikipedia, 31-Oct-2018. [Online]. Available: https://en.wikipedia.org/wiki/Google$_$Drive \newline
+
+
+	
+
+\end{document}
+
