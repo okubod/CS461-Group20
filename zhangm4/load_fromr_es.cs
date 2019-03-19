@@ -9,7 +9,7 @@ public class load_fromr_es : MonoBehaviour
     {
         //Resources is a folder in Assets and pigY is the name of the obj model located at Resources
         //After run, it will import the obj model to display
-        GameObject instance = Instantiate(Resources.Load("pigY", typeof(GameObject))) as GameObject;
+        GameObject instance = Instantiate(Resources.Load("display_model", typeof(GameObject))) as GameObject;
     }
 
     

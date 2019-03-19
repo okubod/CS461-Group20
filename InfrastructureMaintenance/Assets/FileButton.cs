@@ -9,16 +9,16 @@ public class FileButton : MonoBehaviour
     public Text FileText;
     public Image FileImage;
     
-    private File file;
+    private DisplayFile file;
     private FileScrollList file_list;
 
     // Start is called before the first frame update
     void Start()
     {
-        //button.onClick.AddListener (HandleClick);        
+        button.onClick.AddListener (HandleClick);        
     }
 
-    public void Setup(File current_file, FileScrollList current_list)
+    public void Setup(DisplayFile current_file, FileScrollList current_list)
     {
         file = current_file;
 	if (FileText != null){
@@ -38,6 +38,13 @@ public class FileButton : MonoBehaviour
 
     public void HandleClick()
     {
-
+        if (file.type == "dir")
+        {
+	    file_list.SetDirectory(file.file_name);
+	    Debug.Log("LOG: Change Directory");
+        }
+        else{
+            file_list.SetFileLoad(file.file_name);
+        }
     }
 }
