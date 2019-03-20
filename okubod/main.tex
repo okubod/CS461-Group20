@@ -1,0 +1,125 @@
+\documentclass[onecolumn, draftclsnofoot,10pt, compsoc]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{setspace}
+
+\usepackage{geometry}
+\geometry{textheight=9.5in, textwidth=7in}
+
+% 1. Fill in these details
+\def \CapstoneTeamName{         xRLucid}
+\def \CapstoneTeamNumber{       20}
+\def \GroupMemberOne{           David Okubo}
+\def \GroupMemberTwo{           Thomas Kuhn}
+\def \GroupMemberThree{         Karl Popper}
+\def \CapstoneProjectName{      Mixed Reality for Infrastructure Maintenance}
+\def \CapstoneSponsorCompany{   Oregon State University}
+\def \CapstoneSponsorPerson{    Yelda Turkan}
+
+% 2. Uncomment the appropriate line below so that the document type works
+\def \DocType{		%Problem Statement
+				%Requirements Document
+				Technology Review
+				%Design Document
+				%Progress Report
+				}
+			
+\newcommand{\NameSigPair}[1]{\par
+\makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
+\par\vspace{-12pt} \textit{\tiny\noindent
+\makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
+% 3. If the document is not to be signed, uncomment the RENEWcommand below
+\renewcommand{\NameSigPair}[1]{#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{titlepage}
+    \pagenumbering{gobble}
+    \begin{singlespace}
+        \includegraphics[height=4cm]{coe_v_spot1}
+        \hfill 
+        % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
+        %\includegraphics[height=4cm]{CompanyLogo}   
+        \par\vspace{.2in}
+        \centering
+        \scshape{
+            \huge CS Capstone \DocType \par
+            {\large\today}\par
+            \vspace{.5in}
+            \textbf{\Huge\CapstoneProjectName}\par
+            \vfill
+            {\large Prepared for}\par
+            \Huge \CapstoneSponsorCompany\par
+            \vspace{5pt}
+            {\Large\NameSigPair{\CapstoneSponsorPerson}\par}
+            {\large Prepared by }\par
+            Group\CapstoneTeamNumber\par
+            % 5. comment out the line below this one if you do not wish to name your team
+            \CapstoneTeamName\par 
+            \vspace{5pt}
+            {\Large
+                \NameSigPair{\GroupMemberOne}\par
+                %\NameSigPair{\GroupMemberTwo}\par
+                %\NameSigPair{\GroupMemberThree}\par
+            }
+            \vspace{20pt}
+        }
+        \begin{abstract}
+        % 6. Fill in your abstract    
+        	A software that displays construction information and structure information to a user on-site requires it to offer some sort of model for the the user to view and manage the information. In the case of our project, Mixed Reality for Infrastructure Maintenance, a 3D model is needed to be anchored in the real world, on top of an actual structure. This document will cover three important technologies related to the 3D models that we will need to use in our software. These technologies are: the file format of the 3D models, the process by which we will display structure data attached to the 3D model, and the process of overlaying the 3D model over the real world structures.
+        \end{abstract}     
+    \end{singlespace}
+\end{titlepage}
+\newpage
+\pagenumbering{arabic}
+\tableofcontents
+% 7. uncomment this (if applicable). Consider adding a page break.
+%\listoffigures
+%\listoftables
+\clearpage
+% 8. now you write!
+\section{3D Model Format}
+For our 3D models of the structures the 3 model formats we will probably be using is either the Industry Foundation Classes (IFC) format, the FilmBox (FBX) format, or the OBJ format.
+\subsection{IFC}
+The IFC  format is the type of model that is used for describing building and construction industry data. Because of its platform neutral and open file format specification that is not controlled by a single vendor or group of vendors it would be very useful for this project as it could be used and ported around regardless of the system it is being loaded on.[9] Unfortunately, we plan to use the Unity video game engine which does not currently have efficient ways to import IFC files. To get around this we could convert the files to the FBX or OBJ formats and then import them. At this time, the models provided for our project are in IFC format. 
+\subsection{FBX}
+Similar to IFC neutral format, FBX files are made for interoperability of 3D models and their information. Autodesk offers several tools for both converting to and from FBX files and for importing to other applications. In particular, Autodesk FBX files can be easily imported to our design program of choice, Unity. Although it would require converting our current models to the FBX format, it might be the best format to use based on the other tools we plan on using.[7]
+\subsection{OBJ}
+The OBJ format is another open file format for geometry definition. It is much simpler than the other file formats that it is specifically for storing geometry information. Particularly, vertex and face related information. This format falls short of what we need for presenting the 3D models to the user. The software will be providing the user with much more data than what an OBJ stores which would mean outside sources to provide that data, which could lead to needlessly complicated the process. [8]
+\section{Data display in a 3D model}
+Not only does the 3D model need to be displayed to the user over the real world but the information related to the structure will also need to be displayed and have the capability to be edited. This means that the BIM model of the structure will need to be available to the user through the software. To access and display the BIM model is not a functionality that is common across applications in Unity but the Autodesk Forgekit is one that has the best and possibly only plugin that will allow this functionality.
+\subsection{Autodesk ForgeKit}
+Autodesk Forekit is a beta plugin for Unity that allows for transferring Revit BIM models to Unity. This will hopefully allow us to access and display the BIM models to the user. [6]
+\section{Real World Anchors for 3D models}
+There are a few ways we can overlay our 3D models over real world structures. Unity is paired up with using three SDKs for AR/MR/VR development: Vuforia, Windows Mixed Reality (WMR), and Google VR.
+\subsection{Vuforia}
+Vuforia is an Augmented and Mixed Reality development platform for a variety hardware including mobile devices and headsets. Vuforia's compatibility with mobile devices such as phones and tablets is important as our client would like the software to run on a IOS or Android tablet. Vuforia offers maker-based tracking and markerless tracking. Marker-based tracking requires having physical markers that the 3D models anchor themselves to. For example, QR codes. Vuforia also offers image markers, which allow for the 3D models to be anchored to certain real life objects that are pre-loaded as images. Markerless tracking requires using location GPS, gyroscopes and very complex image processing. Since we are using tablets the markerless tracking will most likely not be an optimized option to use. [5]
+\subsection{WMR}
+The Windows Mixed Reality offers very useful anchoring options, including the ability to save and share anchoring across application usage.[3] Unfortunately the WMR platform is only available to be used on Microsoft hardware, such as the HoloLens. [4] This platform would probably be extremely useful in the future to use if the software moves to Hololens hardware, but for the scope of this project we wont be using a HoloLens so this platform will not work.
+\subsection{Google VR}
+The Google VR development playform would probably be the least useful platform for our project.[1] The Google VR requires using a VR headset and although it could be used in the future but for the scope of this project and that we want to use a mobile device such as a tablet, the Google VR would not be a good fit.[2]
+\section{Conclusion}
+Our 3D models are the core of the service we are trying to provide. This means that choosing the best way to present them is one of the most important parts of the project. For file formats, using the FBX format is probably the best way to store the models. With these file formats we also need to display the respective BIM models and to do so we will probably be trying to use the Autodesk ForgeKit as there are not many, if any, plugins for Unity for using BIM models for more than just building the 3D models. Lastly, for our 3D model real world overlay, because of our hardware limitation of a mobile device, we will probably have to use Vuforia since the other two platforms require hardware we are not using.
+
+\newpage
+\section{References}
+
+[1]U. Technologies, "Unity - Manual: Google VR", Docs.unity3d.com, 2018. [Online]. \\Available: https://docs.unity3d.com/Manual/googlevr\_sdk\_overview.html. 
+
+[2]U. Technologies, "Unity - Manual: Google VR hardware and software requirements", Docs.unity3d.com, 2018. [Online]. Available: https://docs.unity3d.com/Manual/googlevr\_requirements.html.
+
+[3]U. Technologies, "Unity - Manual: Windows Mixed Reality", Docs.unity3d.com, 2018. [Online]. Available: https://docs.unity3d.com/Manual/wmr\_sdk\_overview.html.
+
+[4]U. Technologies, "Unity - Manual: WMR hardware and software requirements", Docs.unity3d.com, 2018. [Online]. Available: https://docs.unity3d.com/Manual/wmr\_requirements.html.
+
+[5]U. Technologies, "Unity - Manual: Vuforia", Docs.unity3d.com, 2018. [Online]. \\Available: https://docs.unity3d.com/Manual/vuforia-sdk-overview.html. 
+
+[6]"AR|VR Toolkit Forge/Unity", Forgetoolkit.com, 2018. [Online]. Available: http://forgetoolkit.com/\#/.
+
+[7]"FBX | Adaptable File Formats for 3D Animation Software | Autodesk", Autodesk.com, 2018. [Online]. Available: https://www.autodesk.com/products/fbx/overview.
+
+[8]Cs.cmu.edu, 2018. [Online]. Available: https://www.cs.cmu.edu/~mbz/personal/graphics/obj.html.
+
+[9]"IFC Overview summary — Welcome to buildingSMART-Tech.org", Buildingsmart-tech.org, 2018. [Online]. Available: http://www.buildingsmart-tech.org/specifications/ifc-overview. 
+
+\end{document}
