@@ -40,6 +40,8 @@ public class HubScrollList : MonoBehaviour
 
     public GameObject selfPanel;
     public GameObject projectPanel;
+    public GameObject hubHeader;
+    public GameObject projHeader;
 
     public Text toLoad;
 
@@ -90,6 +92,8 @@ public class HubScrollList : MonoBehaviour
     public void ViewProjects(HubData new_data)
     {
         selfPanel.SetActive(false);
+        hubHeader.SetActive(false);
         projectPanel.SetActive(true);
+        projHeader.SetActive(true);
     }
 }
