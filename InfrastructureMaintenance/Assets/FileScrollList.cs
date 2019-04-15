@@ -27,6 +27,8 @@ public class FileScrollList : MonoBehaviour
     public List<string> path;
     public string load_path = "";
     GameObject dialog = null;
+    public GameObject errorPanel;
+    public GameObject selfPanel;
 
     public Button upButton;
     public Button loadButton;
@@ -59,12 +61,12 @@ public class FileScrollList : MonoBehaviour
         // get initial path
         path = new List<string>();
         string temp = "";
-	#if UNITY_IOS
+	    #if UNITY_IOS
             temp = @"/";
         #elif UNITY_ANDROID
             temp = @"/storage/";
         #elif UNITY_STANDALONE_WIN
-	    temp = @"C:/";
+	        temp = @"E:\";
         #else
             temp = @"/home/cooper";//GetStoragePath();
         #endif
@@ -79,7 +81,7 @@ public class FileScrollList : MonoBehaviour
     {
         // get directories from system and add buttons
         GetDirectories();
-	RemoveButtons();
+	    RemoveButtons();
         //Debug.Log("LOG: Removed Buttons");
         toLoad.text = "";
         load_path = "";
@@ -140,20 +142,28 @@ public class FileScrollList : MonoBehaviour
             for (int i = 0; i < num; i++)
             {
                 fileList.RemoveAt(0);
-	    }
+	        }
             List<string> dir = new List<string>(Directory.EnumerateDirectories(temp));
             // add new directories into file list
             for (int i=0; i < dir.Count; i++)
             {
-		string[] names = dir[i].Split('/');
-                fileList.Add(new DisplayFile() {file_name=names[names.Length-1], type="dir"});
+#if UNITY_STANDALONE_WIN
+                string[] names = dir[i].Split('\\');
+#else
+                string[] names = dir[i].Split('/');
+#endif
+                fileList.Add(new DisplayFile() { file_name = names[names.Length - 1], type = "dir" });
             }
             // get files into file list
             List<string> files = new List<string>(Directory.EnumerateFiles(temp, "*.obj"));
             for (int i=0; i < files.Count; i++)
             {
+#if UNITY_STANDALONE_WIN
+                string[] file_names = files[i].Split('\\');
+#else
                 string[] file_names = files[i].Split('/');
-                fileList.Add(new DisplayFile() {file_name=file_names[file_names.Length-1], type="file"});
+#endif
+                fileList.Add(new DisplayFile() { file_name = file_names[file_names.Length - 1], type = "file" });
             }
         }
     }
@@ -186,11 +196,25 @@ public class FileScrollList : MonoBehaviour
     {
         if (load_path != "")
         {
-            string modelText = File.ReadAllText(load_path);
             Debug.Log("LOAD MODEL: " + load_path);
-            File.WriteAllText(Application.persistentDataPath + "/display_model.obj", modelText);
+            GameObject model = GameObject.Find("ViewModel");
+            MeshFilter mf = model.GetComponent<MeshFilter>();
+            if (mf == null)
+            {
+                model.AddComponent<MeshFilter>();
+                mf = model.GetComponent<MeshFilter>();
+            }
+            else
+            {
+                mf.mesh.Clear();
+            }
+
+            mf.mesh = model.GetComponent<ObjImporter>().ImportFile(load_path);
+            errorPanel.SetActive(false);
+            selfPanel.SetActive(false);
         }
         else{
+            errorPanel.SetActive(true);
             Debug.Log("ERROR: No model selected");
         }
     }

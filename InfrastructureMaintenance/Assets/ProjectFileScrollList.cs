@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.IO;
+using UnityEngine.Networking;
+
 #if UNITY_ANDROID
 using UnityEngine.Android;
 #elif UNITY_IOS
@@ -42,6 +44,7 @@ public class ProjectFileScrollList : MonoBehaviour
 
     public GameObject selfPanel;
     public GameObject picPanel;
+    public GameObject errorPanel;
 
     public Text toLoad;
 
@@ -91,7 +94,35 @@ public class ProjectFileScrollList : MonoBehaviour
 
     public void SelectProjectFile(ProjectFileData new_data)
     {
-        selfPanel.SetActive(false);
-        picPanel.SetActive(true);
+        // close error panel if open
+        errorPanel.SetActive(false);
+        // retrieve the file extension
+        string name = new_data.attributes.displayName;
+        string[] extension = name.Split('.');
+        string ext = extension[extension.Length - 1].ToLower();
+
+        // check if file is an image
+        if (ext.Equals("jpg") || ext.Equals("jpeg") || ext.Equals("png"))
+        {
+            selfPanel.SetActive(false);
+            picPanel.SetActive(true);
+            DownloadImageWWW tex = picPanel.GetComponent<DownloadImageWWW>();
+            tex.setImage();
+        }
+
+        // check if file is a pdf
+        else if (ext.Equals("pdf"))
+        {
+            selfPanel.SetActive(false);
+            picPanel.SetActive(true);
+            DownloadImageWWW tex = picPanel.GetComponent<DownloadImageWWW>();
+            tex.setImage();
+        }
+
+        // otherwise the format is unsupported give error
+        else
+        {
+            errorPanel.SetActive(true);
+        }
     }
 }
