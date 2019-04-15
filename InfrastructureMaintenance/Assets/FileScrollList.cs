@@ -27,6 +27,7 @@ public class FileScrollList : MonoBehaviour
     public List<string> path;
     public string load_path = "";
     GameObject dialog = null;
+	public GameObject selfPanel;
 
     public Button upButton;
     public Button loadButton;
@@ -184,7 +185,7 @@ public class FileScrollList : MonoBehaviour
 
     private void OnLoadButtonClick()
     {
-        if (load_path != "")
+        /*if (load_path != "")
         {
             string modelText = File.ReadAllText(load_path);
             Debug.Log("LOAD MODEL: " + load_path);
@@ -192,6 +193,8 @@ public class FileScrollList : MonoBehaviour
         }
         else{
             Debug.Log("ERROR: No model selected");
-        }
+        }*/
+		//loadButton.SwapModel();
+		selfPanel.SetActive(false);
     }
 }
