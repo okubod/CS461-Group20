@@ -81,8 +81,6 @@ This document describes the implementation of the MR for Infrastructure Maintena
 The system as proposed is intended to create visualization of BIM information and CAD models for individuals in design, maintenance, and education of Civil and Construction Engineering.
 The system has three use cases for a single actor, the user, and seven components.
 These components are the 3D model, detailed model information, anchors, internet connection, controls, viewing port.
-Three classes were identified for the system, with the Model, BIMData, and UIPanel classes.
-BIMData has a composition relationship to the Model class as BIM detailed data pertains to the model.
 \end{abstract}
 \end{singlespace}
 \end{titlepage}
@@ -95,7 +93,8 @@ BIMData has a composition relationship to the Model class as BIM detailed data p
 \begin{tabular}{ p{2cm} p{4cm} p{0.5\textwidth} }
  \textbf{Revision} & \textbf{Date} & \textbf{Summary} \\
  \hline
- 1.0 & 11/27/2018 & Creation of document first draft
+ 1.0 & 11/27/2018 & Creation of document first draft \\
+ 1.1 & 03/31/2019 & Removal of BIMData Class and UIPanel Class in Logical View, noted addition of Button, ScrollList, and Directory classes for each of the UI tasks: browsing the file system, browsing BIM360 hubs, browsing BIM360 issues, browsing BIM360 projects, and browsing BIM360 project files. More details can be found in the subsection 10.1 Logical View: Update 1.1. Updated rationale for the design updates can be found in subsection 16.1 Design Rationale: Update 1.1.
 \end{tabular}
 
 \pagenumbering{arabic}
@@ -169,7 +168,7 @@ The output of the system is a graphics render on a screen of camera feed from th
 \section{Composition View}
 The system will have multiple important components to allow for the User to interact with the structure information and allow for the device to communicate with online databases. These include a 3D model visualization, detailed information about the 3D model, Anchors, internet connections, database connections, various user controls, and a viewing port.
 \begin{itemize}
-    \item \textbf{Viewing port:} 3D model placed in the real world with detailed views of specific structure parts physical model of a structure based on a connected BIM360 database. The overall model will be viewed from afar but also parts of the model can be 'zoomed in' on to show a detailed view.
+    \item \textbf{Overview Model:} 3D model placed in the real world with detailed views of specific structure parts physical model of a structure based on a connected BIM360 database. The overall model will be viewed from afar but also parts of the model can be 'zoomed in' on to show a detailed view.
     \item \textbf{Detailed Model Information:} When viewing the 3D model in a more detailed view (e.g.: viewing a specific structural pillar), BIM360 information will be shown for that portion.
     \item \textbf{Anchors:} The anchors are spots to 'attach' the 3D model to the real world.
     \item \textbf{Internet Connection:} Required to download and upload BIM files.
@@ -180,8 +179,8 @@ The system will have multiple important components to allow for the User to inte
 %\section{Logical Viewpoint}
 \section{Logical View}
 There are three identified classes for the system shown in Figure 2.
-The BIMData class is a composition of the Model class as the system creates a BIMData object for the Model object, if the user chooses to view detailed data.
-The UIPanel class is an object for creating a window in the Unity Engine to display the BIM data.
+The BIMData class (removed in update 1.1) is a composition of the Model class as the system creates a BIMData object for the Model object, if the user chooses to view detailed data.
+The UIPanel class (removed in update 1.1) is an object for creating a window in the Unity Engine to display the BIM data.
 The class will get data from the BIMData class using the get\_qualities and get\_quantities methods.\par
 \begin{figure}[ht]
     \centering
@@ -190,6 +189,32 @@ The class will get data from the BIMData class using the get\_qualities and get\
     \label{fig:ClassDiagram}
 \end{figure}
 For the use case of adding detailed data, the BIMData class has two additional methods called add\_quantity() and add\_quality() to add new entries into the data of the model.\par
+
+\subsection{Logical View: Update 1.1}
+The BIMData class has been removed from the design as the data we receive from the BIM360 API is in the form of a file to be downloaded and opened.
+The initial file types to be supported for meta-data are JPEG, PNG, and PDF.
+The UIPanel class has also been removed as the only UI required is to find the file the user wants to download.\par
+The newly identified classes are the Button, ScrollList, and Directory classes for each UI task.
+These UI tasks are browsing the file system, browsing BIM360 hubs, browsing BIM360 issues, browsing BIM360 projects, and browsing BIM360 project files.
+Each of these tasks requires unique prefabricated UI components in Unity 3D, thus a unique BUtton, ScrollList, and Directory class will be created for each, utilizing the corresponding prefab components.\par
+The ScrollList class is in charge of gathering data needed for the UI either from a BIM360 API call or the system, and populating the UI with buttons for each element of the data gathered.
+The common methods of the ScrollList classes are RefreshDisplay(), AddButtons(), and RemoveButtons().
+The classes then include supporting methods for retrieving the data to be displayed.
+The ScrollList class requires the use of a unique class for each data type needed by the UI including: Hub, Issues, File, Project, and ProjectFile.
+The Hub, Issues, Project, and ProjectFile classes are structured as nested classes for automated JSON parsing of the API response.
+The Hub class contains the name of the hub from BIM360 and it's ID for accessing BIM360 hubs.
+The Issues class contains the strings for created\_at, created\_by, title, and description.
+The File class contains the name of the system directory/file, the type of file it is (directory or class), and the icon for it's button.
+The Project class contains the id of the project, the name of the project, and the id of the root folder.
+Finally the ProjectFile class contains the file ID, displayName, createTime, createUserID, and createUserName.
+These relate to the creation of the file in question.\par
+The Directory class handles the creation and deletion of the GameObjects in Unity 3d associated with the prefabricated button created for the UI.
+This class contains the prefab variable which holds reference to the prefabricated entity the class is supposed to create and a stack of the GameObjects.
+The class contains methods GetObject() and ReturnObject().\par
+Finally there is the Button class for each UI task.
+In general the button contains a reference to the button object in Unity, the ScrollList object it came from, and the class object the button represents.
+The Button also includes Unity objects such as Text for any display component of the button.
+The methods of the Button classes are Setup() and onCLick().\par
 
 %\section{Dependency View}
 %\section{Patterns View}
@@ -227,5 +252,10 @@ BIM360 Interfacing - Overall interfacing from BIM360 will be used as a resource 
 \section{Design Rationale}
 The three classes were designed to create the object oriented nature necessary, as a single BIM project may have multiple models, each with their own detailed data for viewing and adding to. There was consideration for an additional class for the anchors that hold the location of the 3D model, however this was changed due to the discovery of the Vuforia SDK plugin for unity. This plugin makes the anchors something the system will interface with, as opposed to creating. The user interface's purpose will be to streamline the start-up process and make interaction and overall use of the software easier to understand and learn. 
 
-The user input management is the part that stores and displays information beside the 3d model and each of the data should link to specific part of the 3d model. Also, the display of such data should be made when rendering the 3d model and in a 3d like structure.
+The user input management is the part that stores and displays information beside the 3d model and each of the data should link to specific part of the 3d model. Also, the display of such data should be made when rendering the 3d model and in a 3d like structure.\par
+
+\subsection{Design Rationale: Update 1.1}
+The creation of the new classes were from Unity needing classes to create each UI object at run time, and dynamically create UI elements on the UI panel.
+This meant each button needed to be a class with the Directory classes needed by Unity to generate GameObjects for the Button class to be attached to.
+This is largely from the inherit structure of Unity 3D.\par
 \end{document}
