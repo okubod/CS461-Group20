@@ -1,0 +1,37 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {I}Introduction}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {II}Display Device for Mixed Reality}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Microsoft HoloLens}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Magic Leap One}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Mobile Tablet}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-D}}Comparison}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {III}Acquiring 3D Position of the User}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Sensors: Accelerometer, Gyroscope, Magnetometer}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}GPS: Global Positioning System}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}External Sensors: Inside Out Tracking}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Comparison}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {IV}User Input Methods of Mixed Reality}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Touch Screen}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Hand Tracking}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Voice Commands}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Comparison}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {V}Conclusion}{8}

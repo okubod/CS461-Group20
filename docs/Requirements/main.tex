@@ -44,7 +44,7 @@
 				%Design Document
 				%Progress Report
 				}
-			
+
 \newcommand{\NameSigPair}[1]{\par
 \makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
 \par\vspace{-12pt} \textit{\tiny\noindent
@@ -58,9 +58,9 @@
     \pagenumbering{gobble}
     \begin{singlespace}
     	\includegraphics[height=4cm]{coe_v_spot1}
-        \hfill 
+        \hfill
         % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
-        %\includegraphics[height=4cm]{CompanyLogo}   
+        %\includegraphics[height=4cm]{CompanyLogo}
         \par\vspace{.2in}
         \centering
         \scshape{
@@ -76,7 +76,7 @@
             {\large Prepared by }\par
             Group\CapstoneTeamNumber\par
             % 5. comment out the line below this one if you do not wish to name your team
-            \CapstoneTeamName\par 
+            \CapstoneTeamName\par
             \vspace{5pt}
             {\Large
                 \NameSigPair{\GroupMemberOne}\par
@@ -123,17 +123,17 @@
             \hangindent=10mm\hangafter=0\noindent The device will utilized the camera to overlay objects from the model file to their real-life counterparts. The user will be able to select specific components to view a more detailed model as well as additional information. \par
             \textit{Site Adaptation Requirements}\par
             \hangindent=10mm\hangafter=0\noindent The devices GPS and camera's sensors will be used to pinpoint the user's location in relation to the object being examined. The camera will be used to keep objects anchored and overlaid onto the real-world components while the user moves around and interacts with the virtual objects. \par
-            
+
             \subsubsection{Product Functions}
                    \hspace{10mm}FUNC 1: \hspace{10mm}Connect to cloud interface for BIM.\par
                    \hspace{10mm}FUNC 2: \hspace{10mm}Display 3D model from BIM overlaying real world structure.\par
                    \hspace{10mm}FUNC 3: \hspace{10mm}Access and edit BIM maintenance information.\par
                    \hspace{10mm}FUNC 4: \hspace{10mm}Submit edited BIM information to cloud.\par
-            
+
             \subsubsection{User Characteristics}
                \hangindent=10mm\hangafter=0\noindent Maintenance Employee: The maintenance employee is the person/s that will be on site of a structure performing inspection/maintenance and logging inspection/maintenance data through MR Maintenance. They will also be viewing detailed BIM models over the real world structure. Training of employees may be needed.\par
-            
-            
+
+
             \subsubsection{Limitations}
             \hangindent=10mm\hangafter=0\noindent Limitations for the software include the use of mobile tablet device, restricting software to run on iOS and Android operating systems.\par
     \subsection{Definitions}
@@ -154,8 +154,8 @@
         %Define the fundamental actions that have to take place in the software in accepting and processing the inputs and in processing and generating the outputs, including
         \subsubsection*{a) Validity checks on the inputs}
             \hangindent=10mm\hangafter=0\noindent Using an on-screen keyboard in the software for input to prevent nonchar input errors. \par
-            
-        \subsubsection*{b) Exact sequence of operations} 
+
+        \subsubsection*{b) Exact sequence of operations}
         %\begin{itemize} %
             \hangindent=10mm\hangafter=0\noindent 1) Import/Load model from obj files into the software. \newline
             2) Render a 3D model of the objects from the file. \newline
@@ -170,7 +170,7 @@
             \hangindent=10mm\hangafter=0\noindent
             %1) Overflow \newline
             %2) Communication facilities \newline
-            %3) 
+            %3)
             Error handling and recovery \par
             \hangindent=15mm\hangafter=0\noindent
             Display an error message if: \par
@@ -189,23 +189,23 @@
          %    2) Input of database address \newline
         %     3) Formulas for input to output conversion \newline
         %It may be appropriate to partition the functional requirements into subfunctions or subprocesses. This does not imply that the software design will also be partitioned that way. \par
-        
-        The relationship of output and input for this software will be mainly the user's satisfaction of how the BIM model requested is presented. The client and users satisfaction will be the output for the performance of software application implemented. The functions in the software will be considered as the input of this sequence.
- 
 
-    \subsection{Usability Requirements}   
+        The relationship of output and input for this software will be mainly the user's satisfaction of how the BIM model requested is presented. The client and users satisfaction will be the output for the performance of software application implemented. The functions in the software will be considered as the input of this sequence.
+
+
+    \subsection{Usability Requirements}
         Some important usability requirements that our team has established based off of H.C.I. usability specialists in our team are to make sure that all functions and options of functions are in a 'recall' from experience instead of having the user 'learn' how to operate and use our application. This means we will be incorporating the functions in a way that will have the user understand where the settings and functions like it is second nature to them. Another target our team established for usability requirements is to make sure our overall application is as simple to operate as possible, this means on the homepage of the application will ask the user whether or not they would like to use the tablet function or others options.
-        
+
     \subsection{Performance Requirements}
        % Specify both the static and the dynamic numerical requirements placed on the software or on human interaction with the software as a whole. Static numerical requirements may include the following: \newline
        % \hangindent=10mm\hangafter=0\noindent
        %     a) The number of terminals to be supported; \newline
         %    b) The number of simultaneous users to be supported; \newline
-        %    c) Amount and type of information to be handled. Static numerical requirements are sometimes identified under a separate section entitled Capacity. 
+        %    c) Amount and type of information to be handled. Static numerical requirements are sometimes identified under a separate section entitled Capacity.
        % \par
-        %Dynamic numerical requirements may include, for example, the numbers of transactions and tasks and the amount of data to be processed within certain time periods for both normal and peak workload conditions. The performance requirements should be stated in measurable terms. 
+        %Dynamic numerical requirements may include, for example, the numbers of transactions and tasks and the amount of data to be processed within certain time periods for both normal and peak workload conditions. The performance requirements should be stated in measurable terms.
        % For example,
-       %     95\% of the transactions shall be processed in less than 1 second. 
+       %     95\% of the transactions shall be processed in less than 1 second.
        % rather than,
        %     An operator shall not have to wait for the transaction to complete.
        % NOTE Numerical limits applied to one specific function are normally specified as part of the processing subparagraph description of that function.
@@ -215,17 +215,17 @@
            \item 90\% of all 3D models will be loaded and rendered in no more than twice the time for equivalent models to be loaded in Autodesk Revit.
            \item 90\% of all maintenance information transactions with the tool chain will be processed in less than 5 seconds(allowance made for mobile device in the field as expected platform).
        \end{itemize}
-       
+
     \subsection{Logical Database Requirements}
         Information to be placed into a database will be placed utilizing the Autodesk Forge SDK. The SDK functions will manage inputs into the existing tools. Data entities and their properties are governed by these tools. Access to these entities will have a high frequency, estimated average of one access per minute of use.
 
     \subsection{Design Constraints}
          %Specify constraints on the system design imposed by external standards, regulatory requirements, or project limitations.
-         
+
          Some design constraints that may occur is that there may be a limited way of using BIM and putting it into only using tablet devices. A personal error and issue our team has realized that we may face is the fact that if we build this application there would be some contract complications with IOS hardware, where as if we used tablets powered by androids it would be easier and less constricting when creating our application and using it.
-         
-         
-         
+
+
+
     \subsection{Software System Attributes}
         %Specify the required attributes of the software product. The following is a partial list of examples:\newline
         \noindent a) Reliability% - Specify the factors required to establish the required reliability of the software system at time of delivery.\newline
@@ -255,11 +255,11 @@
         \begin{itemize}
             \item User Interface, user position tracking, and 3D model rendering should be kept modular to not only support maintenance of the software, but support upgrade potential to future MR devices.
         \end{itemize}
-        e) Portability% - Specify attributes of software that relate to the ease of porting the software to other host machines and/or operating systems, including: 
+        e) Portability% - Specify attributes of software that relate to the ease of porting the software to other host machines and/or operating systems, including:
         %\begin{itemize}
-        %    \item 1) Percentage of elements with host-dependent code; 
+        %    \item 1) Percentage of elements with host-dependent code;
         %    \item 2) Percentage of code that is host dependent;
-        %    \item 3) Use of a proven portable language; 
+        %    \item 3) Use of a proven portable language;
         %    \item 4) Use of a particular compiler or language subset;
         %    \item 5) Use of a particular operating system.
         %\end{itemize}
@@ -272,7 +272,7 @@
     %\begin{itemize}
     %   \item a) Sample input/output formats, descriptions of cost analysis studies, or results of user surveys;
     %    \item b) Supporting or background information that can help the readers of the SRS;
-    %    \item c) A description of the problems to be solved by the software; d) Special packaging instructions for the code and the media to meet security, export, initial loading, or other requirements. The SRS should explicitly state whether or not these information items are to be considered part of the requirements. 
+    %    \item c) A description of the problems to be solved by the software; d) Special packaging instructions for the code and the media to meet security, export, initial loading, or other requirements. The SRS should explicitly state whether or not these information items are to be considered part of the requirements.
     %\end{itemize}
     \begin{itemize}
         \item The problem to be solve is a lack of software to help maintenance employees visual maintenance information in the field with BIM models. This is to be considered part of the requirements.
@@ -288,14 +288,14 @@
         %indent later
         The software should be able to connect to the tool chain with whichever device it is installed on. There isn't one specific device that must be used, as long as the device meets the software's requirements.
     \subsection{Functions}
-        An on-screen keyboard will be provided for user input to prevent input errors. When inspecting an object, the user will be able to import a BIM file from a model file after connecting to the tool chain. After loading the BIM file, the user sets anchor points in the real-world using the device's camera. These anchor points help overlay the real-world object with the virtual model from the BIM file. When the user physically moves, the virtual objects will continue to be an overlay on the real-world components. Selecting a specific component on the device will display more specific information for the user. The BIM can be modified using this software, and the file itself can be updated and uploaded into the cloud database. 
+        An on-screen keyboard will be provided for user input to prevent input errors. When inspecting an object, the user will be able to import a BIM file from a model file after connecting to the tool chain. After loading the BIM file, the user sets anchor points in the real-world using the device's camera. These anchor points help overlay the real-world object with the virtual model from the BIM file. When the user physically moves, the virtual objects will continue to be an overlay on the real-world components. Selecting a specific component on the device will display more specific information for the user. The BIM can be modified using this software, and the file itself can be updated and uploaded into the cloud database.
         We will need to handle different situations when the software isn't functioning properly. When the app is first launched, it needs to check if the device has all of the necessary hardware and features needed to use the software properly. If the phone is ever locked while the app is in use, it will need to relocate the device and where it is located compared to the object being inspected. This ensures that the object overlay isn't corrupted by a lapse in connection.
         The function of this software is to be used to streamline maintenance inspections with construction. The user will be inputting different changes they want to make to objects being displayed on their device while seeing their changes updating the object, as well as the BIM file if they choose to update it.
-        
+
     \subsection{Usability Requirements}
         The overall usability and function of the software should feel familiar for users who are experienced using other infrastructure software. The software should be simple enough for new users to operate with little to no experience.
     \subsection{Performance Requirements}
-        The software will be able to load and use one BIM model including all of the information that comes with the model. Most 3D models will be able to be imported and processed on the mobile device at no more than double the time that Autodesk Revit will be able to load the same 3D models. 
+        The software will be able to load and use one BIM model including all of the information that comes with the model. Most 3D models will be able to be imported and processed on the mobile device at no more than double the time that Autodesk Revit will be able to load the same 3D models.
     \subsection{Logical Database Requirements}
     Database system is controlled by the existing workflow of the client. As such, there is no verification required for this software.
     \subsection{Design Constraints}
@@ -312,7 +312,7 @@
         \begin{tabular}{l p{100mm}}
            Assumption 1: & Users have access to the existing tool chain with BIM models.
         \end{tabular}
-    \end{table} 
+    \end{table}
 \subsection{Acronyms and Abbreviations}
     \begin{table}[ht]
         \begin{tabular}{l p{100mm}}
@@ -325,7 +325,7 @@
 \section{Gantt Chart}
     \begin{figure}[ht]
         \centering
-            \includegraphics[width=1.0\textwidth]{schedule.png}
+            \includegraphics[width=1.0\textwidth]{schedule.eps}
         \caption{Tentative Schedule for Software Completion}
     \end{figure}
 
