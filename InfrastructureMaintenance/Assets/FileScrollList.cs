@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.IO;
+using Vuforia;
 #if UNITY_ANDROID
 using UnityEngine.Android;
 #elif UNITY_IOS
@@ -34,6 +35,9 @@ public class FileScrollList : MonoBehaviour
     public Button loadButton;
 
     public Text toLoad;
+	
+	public TrackableBehaviour theTrackable;
+	public Camera ar_camera;
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +70,7 @@ public class FileScrollList : MonoBehaviour
         #elif UNITY_ANDROID
             temp = @"/storage/";
         #elif UNITY_STANDALONE_WIN
-	        temp = @"E:\";
+	        temp = @"C:\";
         #else
             temp = @"/home/cooper";//GetStoragePath();
         #endif
@@ -89,17 +93,21 @@ public class FileScrollList : MonoBehaviour
     }
 
     public void SetDirectory(string new_path){
-         // add new directory to the path
-         path.Add("/"+new_path);
-         //Debug.Log("LOG: Added new path" + new_path);
-         RefreshDisplay();
+        // add new directory to the path
+#if UNITY_STANDALONE_WIN
+        path.Add(new_path + "\\");
+#else
+        path.Add(new_path + "/");
+#endif
+        //Debug.Log("LOG: Added new path" + new_path);
+        RefreshDisplay();
     }
 
     public void SetFileLoad(string file)
     {
         toLoad.text = file;
         load_path = GetCurrentPath();
-        load_path = load_path + "/" + file;
+        load_path = load_path + file;
     }
 
     private void RemoveButtons()
@@ -143,7 +151,28 @@ public class FileScrollList : MonoBehaviour
             {
                 fileList.RemoveAt(0);
 	        }
-            List<string> dir = new List<string>(Directory.EnumerateDirectories(temp));
+            List<string> dir;
+            if (Directory.Exists(temp))
+            {
+                try
+                {
+                    dir = new List<string>(Directory.EnumerateDirectories(temp));
+                }
+                catch (Exception)
+                {
+                    // remove the last path
+                    path.RemoveAt(path.Count - 1);
+                    temp = GetCurrentPath();
+                    dir = new List<string>(Directory.EnumerateDirectories(temp));
+                }
+            }
+            else
+            {
+                // remove the last path
+                path.RemoveAt(path.Count - 1);
+                temp = GetCurrentPath();
+                dir = new List<string>(Directory.EnumerateDirectories(temp));
+            }
             // add new directories into file list
             for (int i=0; i < dir.Count; i++)
             {
@@ -199,19 +228,32 @@ public class FileScrollList : MonoBehaviour
             Debug.Log("LOAD MODEL: " + load_path);
             GameObject model = GameObject.Find("ViewModel");
             MeshFilter mf = model.GetComponent<MeshFilter>();
-            if (mf == null)
-            {
-                model.AddComponent<MeshFilter>();
-                mf = model.GetComponent<MeshFilter>();
-            }
-            else
-            {
-                mf.mesh.Clear();
-            }
+			if (mf == null)
+			{
+				model.AddComponent<MeshFilter>();
+				mf = model.GetComponent<MeshFilter>();
+			}
+			else
+			{
+				mf.mesh.Clear();
+			}
 
-            mf.mesh = model.GetComponent<ObjImporter>().ImportFile(load_path);
-            errorPanel.SetActive(false);
-            selfPanel.SetActive(false);
+			mf.mesh = model.GetComponent<ObjImporter>().ImportFile(load_path);
+			errorPanel.SetActive(false);
+			selfPanel.SetActive(false);
+			if(ar_camera.isActiveAndEnabled == true){
+				GameObject trackableGameObject = theTrackable.gameObject;
+				for (int i = 0; i < trackableGameObject.transform.childCount; i++)
+				{
+					Transform child = trackableGameObject.transform.GetChild(i);
+					child.gameObject.active = false;           
+				}
+				model.transform.parent = theTrackable.transform;
+				model.transform.localPosition = new Vector3(0,0.2f,0);
+				model.transform.localRotation = Quaternion.identity;
+				model.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+				model.active = true;
+			}
         }
         else{
             errorPanel.SetActive(true);
