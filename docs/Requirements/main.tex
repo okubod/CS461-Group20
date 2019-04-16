@@ -102,9 +102,9 @@
 \section{Introduction}
 
     \subsection{Purpose}
-    This document describes the functional and nonfunctional requirements of MR Maintain being created by xRLucid. MR Maintain will allow users to view BIM models in mixed reality on a mobile tablet device. Allowing them to view and modify BIM information, as well as a full-scale 3D model of the structure overlaying the physical structure in the real world.\par
+    This document describes the functional and nonfunctional requirements of MR Maintain being created by xRLucid. MR Maintain will allow users to view BIM models in mixed reality on a mobile tablet device, specifically ones running android operating systems. Allowing them to view and modify BIM information, as well as a full-scale 3D model of the structure overlaying the physical structure in the real world.\par
     \subsection{Scope}
-    MR Maintain is a mobile application that will allow users to access and see full BIM models overlaying the physical models in the real world. The application will additionally allow users to modify maintenance information associated with the structure through an intuitive MR interface.\par
+    MR Maintain is a mobile application that will allow users to access and see full 3D models overlaying the physical models in the real world. The application will additionally allow users to modify and view maintenance information associated with the structure through an intuitive MR interface. This maintenance information access will be implemented as a stretch goal and is not part of requirements.\par
         \subsection{Product Overview}
             \subsubsection{Product Perspective}
             \textit{User Interfaces}\par
@@ -113,14 +113,14 @@
             \hangindent=10mm\hangafter=0\noindent No hardware interfaces are included.\par
             \textit{Software Interfaces}\par
             \noindent\hspace{10mm}Software Interface: Existing work flow of the client.\par
-            \hangindent=15mm\hangafter=0\noindent MR Maintain will connect to the existing tool chain that the client uses to access and edit BIM data. This is not a requirement of the client but what the development team has decided to implement.\par
+            \hangindent=15mm\hangafter=0\noindent MR Maintain will connect to the existing tool chain that the client uses to access and edit BIM data. This is not a requirement and will be implemented as a stretch goal.\par
             \noindent\hangafter=0\hspace{15mm}Upon transmission of edited data, software will notify users of the transmission's status.\par
             \textit{Communications Interfaces}\par
             \hangindent=10mm\hangafter=0\noindent No communication interface is included at this time.\par
             \textit{Memory}\par
-            \hangindent=10mm\hangafter=0\noindent The BIM file will be downloaded and stored on the device for the software to display the 3D model. \par
+            \hangindent=10mm\hangafter=0\noindent The obj file will be accessed from storage on the device for the software to display the 3D model. \par
             \textit{Operations}\par
-            \hangindent=10mm\hangafter=0\noindent The device will utilized the camera to overlay objects from the BIM file to their real-life counterparts. The user will be able to select specific components to view a more detailed model as well as additional information. \par
+            \hangindent=10mm\hangafter=0\noindent The device will utilized the camera to overlay objects from the model file to their real-life counterparts. The user will be able to select specific components to view a more detailed model as well as additional information. \par
             \textit{Site Adaptation Requirements}\par
             \hangindent=10mm\hangafter=0\noindent The devices GPS and camera's sensors will be used to pinpoint the user's location in relation to the object being examined. The camera will be used to keep objects anchored and overlaid onto the real-world components while the user moves around and interacts with the virtual objects. \par
             
@@ -149,7 +149,7 @@
 
 \section{Specific Requirements}
     \subsection{External Interfaces}
-        \hangindent=10mm\hangafter=0\noindent The software needs to be able to connect to the BIM 360 database to download, update, and upload BIM files. The software itself can be used on any mobile device with a front-facing camera, accelerometer, gyroscope, GPS, and an internet connection. \par
+        \hangindent=10mm\hangafter=0\noindent The software needs to be able to connect to the BIM 360 database to download project files and upload maintenance issues. The software itself can be used on any mobile device with a front-facing camera, accelerometer, gyroscope, GPS, and an internet connection. \par
     \subsection{Functions} % duplicate and tailor these sections for each of the functions listed in section 3.2 of this document
         %Define the fundamental actions that have to take place in the software in accepting and processing the inputs and in processing and generating the outputs, including
         \subsubsection*{a) Validity checks on the inputs}
@@ -157,12 +157,12 @@
             
         \subsubsection*{b) Exact sequence of operations} 
         %\begin{itemize} %
-            \hangindent=10mm\hangafter=0\noindent 1) Import/Load BIM from IFC files into the software. \newline
-            2) Render a 3D model of the objects from the BIM file. \newline
+            \hangindent=10mm\hangafter=0\noindent 1) Import/Load model from obj files into the software. \newline
+            2) Render a 3D model of the objects from the file. \newline
             3) Pick anchor points in the real-world for the 3D model and match the virtual objects to the real-world structure based on the anchors. \newline
             4) Overlay the 3D model onto the real-world structure. \newline
             5) The software's 3D engine will keep the objects in position while the phone camera moves. \newline
-            6) The user can select a specific component of the 3D model to get more information on that object. \newline
+            6) The user can select a files from the BIM360 project to get more information. \newline
             7) Access/edit maintenance info from BIM. \newline
             8) Save new updated maintenance info to the cloud database. \par
         %\end{itemize}
