@@ -1,123 +1,33 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2016.3.16)  15 APR 2019 23:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2016.3.18)  10 JUN 2019 09:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**cooperTechReview.tex
-(./cooperTechReview.tex
+**problemStatement.tex
+(./problemStatement.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
 aded.
-(./IEEEtran.cls
-Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
--- See the "IEEEtran_HOWTO" manual for usage information.
--- http://www.michaelshell.org/tex/ieeetran/
-\@IEEEtrantmpdimenA=\dimen102
-\@IEEEtrantmpdimenB=\dimen103
-\@IEEEtrantmpdimenC=\dimen104
-\@IEEEtrantmpcountA=\count79
-\@IEEEtrantmpcountB=\count80
-\@IEEEtrantmpcountC=\count81
-\@IEEEtrantmptoksA=\toks14
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
--- Using 8.5in x 11in (letter) paper.
--- Using DVI output.
-\@IEEEnormalsizeunitybaselineskip=\dimen105
--- This is a 10 point document.
-\CLASSINFOnormalsizebaselineskip=\dimen106
-\CLASSINFOnormalsizeunitybaselineskip=\dimen107
-\IEEEnormaljot=\dimen108
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-\IEEEquantizedlength=\dimen109
-\IEEEquantizedlengthdiff=\dimen110
-\IEEEquantizedtextheightdiff=\dimen111
-\IEEEilabelindentA=\dimen112
-\IEEEilabelindentB=\dimen113
-\IEEEilabelindent=\dimen114
-\IEEEelabelindent=\dimen115
-\IEEEdlabelindent=\dimen116
-\IEEElabelindent=\dimen117
-\IEEEiednormlabelsep=\dimen118
-\IEEEiedmathlabelsep=\dimen119
-\IEEEiedtopsep=\skip41
-\c@section=\count82
-\c@subsection=\count83
-\c@subsubsection=\count84
-\c@paragraph=\count85
-\c@IEEEsubequation=\count86
-\abovecaptionskip=\skip42
-\belowcaptionskip=\skip43
-\c@figure=\count87
-\c@table=\count88
-\@IEEEeqnnumcols=\count89
-\@IEEEeqncolcnt=\count90
-\@IEEEsubeqnnumrollback=\count91
-\@IEEEquantizeheightA=\dimen120
-\@IEEEquantizeheightB=\dimen121
-\@IEEEquantizeheightC=\dimen122
-\@IEEEquantizeprevdepth=\dimen123
-\@IEEEquantizemultiple=\count92
-\@IEEEquantizeboxA=\box26
-\@IEEEtmpitemindent=\dimen124
-\IEEEPARstartletwidth=\dimen125
-\c@IEEEbiography=\count93
-\@IEEEtranrubishbin=\box27
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -330,78 +240,51 @@ Now handling font encoding U ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-)) (./blindtext.sty
-Package: blindtext 2005/10/20 V1.5 blindtext-Package
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
-)
-\c@blindtext=\count94
-\c@Blindtext=\count95
-\blind@countxx=\count96
-\blindtext@numBlindtext=\count97
-\blind@countyy=\count98
-\c@blindlist=\count99
-\c@blindlistlevel=\count100
-\c@blindlist@level=\count101
-\blind@listitem=\count102
-\c@listcount=\count103
-\c@blind@levelcount=\count104
-
-
-Package blindtext Warning: You are not using babel.sty -> Language by random
-(blindtext)                Kein babel.sty verwendet -> Zufallssprache on input 
-line 226.
-
-) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2008/07/08 v3.8m The Babel package
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/english.ldf
-Language: english 2005/03/30 v3.3o English support from the babel system
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count105
-\U@D=\dimen126
-)
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
-Package: csquotes 2011/10/22 v5.1d context-sensitive quotations
-
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
-Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count106
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
 )
-\etb@tempcnta=\count107
-)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks16
 )
-\csq@reset=\count108
-\csq@gtype=\count109
-\csq@glevel=\count110
-\csq@qlevel=\count111
-\csq@maxlvl=\count112
-\csq@tshold=\count113
-\csq@ltx@everypar=\toks18
-
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
-File: csquotes.def 2011/10/22 v5.1d csquotes generic definitions
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
 )
-Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
-Package csquotes Info: ... configuration file loaded successfully.
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
-File: csquotes.cfg 
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
@@ -420,63 +303,189 @@ Package graphics Info: Driver file: dvips.def on input line 91.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen127
-\Gin@req@width=\dimen128
-) (./url.sty
-\Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
 )
-(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count90
+\lst@gtempboxa=\box26
+\lst@token=\toks18
+\lst@length=\count91
+\lst@currlwidth=\dimen113
+\lst@column=\count92
+\lst@pos=\count93
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count94
+\lst@lineno=\count95
+\lst@maxwidth=\dimen116
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count96
+\lst@skipnumbers=\count97
+\lst@framebox=\box27
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-\Gm@cnth=\count114
-\Gm@cntv=\count115
-\c@Gm@tempcnt=\count116
-\Gm@bindingoffset=\dimen129
-\Gm@wd@mp=\dimen130
-\Gm@odd@mp=\dimen131
-\Gm@even@mp=\dimen132
-\Gm@layoutwidth=\dimen133
-\Gm@layoutheight=\dimen134
-\Gm@layouthoffset=\dimen135
-\Gm@layoutvoffset=\dimen136
-\Gm@dimlist=\toks19
-)
-Package csquotes Info: Checking for multilingual support...
-Package csquotes Info: ... found 'babel' package.
-Package csquotes Info: Adjusting default style.
-Package csquotes Info: Redefining alias 'default' -> 'english'.
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-No file cooperTechReview.aux.
-\openout1 = `cooperTechReview.aux'.
+(/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
--- Lines per column: 38 (approximate, difference = 8.56499pt).
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count98
+\rotFPtop=\skip44
+\rotFPbot=\skip45
+\rot@float@box=\box28
+\rot@mess@toks=\toks19
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks20
+\ex@=\dimen117
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen118
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count99
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count100
+\leftroot@=\count101
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count102
+\DOTSCASE@=\count103
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen119
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count104
+\c@MaxMatrixCols=\count105
+\dotsspace@=\muskip10
+\c@parentequation=\count106
+\dspbrk@lvl=\count107
+\tag@help=\toks21
+\row@=\count108
+\column@=\count109
+\maxfields@=\count110
+\andhelp@=\toks22
+\eqnshift@=\dimen120
+\alignsep@=\dimen121
+\tagshift@=\dimen122
+\tagwidth@=\dimen123
+\totwidth@=\dimen124
+\lineht@=\dimen125
+\@envbody=\toks23
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks25
+)
+! Undefined control sequence.
+l.18 \titleformat
+                 {\section}
+? q
+OK, entering \batchmode...
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \titleformat{\section
+                          }
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Argument of \@xdblarg has an extra }.
+<inserted text> 
+                \par 
+l.18 \titleformat{\section}
+                           
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \@xdblarg was complete.
+<to be read again> 
+                   \par 
+l.18 \titleformat{\section}
+                           
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19   {\normalfont\Large\bfseries}{\thesection
+                                               }{1em}{}[{\titlerule[0.8pt]}]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.19 ...\bfseries}{\thesection}{1em}{}[{\titlerule
+                                                  [0.8pt]}]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+No file problemStatement.aux.
+\openout1 = `problemStatement.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -486,22 +495,22 @@ LaTeX Font Info:    ... okay on input line 49.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(54.2025pt, 505.89pt, 54.2025pt)
-* v-part:(T,H,B)=(43.362pt, 686.56499pt, 65.043pt)
+* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=505.89pt
 * \textheight=686.56499pt
 * \oddsidemargin=-18.06749pt
 * \evensidemargin=-18.06749pt
-* \topmargin=-67.78125pt
-* \headheight=12.0pt
-* \headsep=26.87326pt
-* \topskip=12.0pt
-* \footskip=38.27646pt
-* \marginparwidth=20.0pt
-* \marginparsep=10.0pt
-* \columnsep=12.0pt
-* \skip\footins=16.19989pt plus 7.19989pt minus 3.59995pt
+* \topmargin=-18.06749pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -511,37 +520,62 @@ LaTeX Font Info:    ... okay on input line 49.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-File: coe_v_spot1.eps Graphic file (type eps)
-<coe_v_spot1.eps>
-LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 63.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 63.
- [1] (./cooperTechReview.toc
+\c@lstlisting=\count111
+ [1
 
-! Package etoolbox Error: Boolean '\ifciterequest' undefined.
+] [1]
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
 
-See the etoolbox package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \boolfalse {citerequest}
-                            \boolfalse {citetracker}\boolfalse {pagetracker}...
+ []
 
-? ls
-Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, E to edit your file,
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
-? x
- 
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+
+ []
+
+ [1]
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+
+ []
+
+ [2] (./problemStatement.aux) ) 
 Here is how much of TeX's memory you used:
- 3460 strings out of 495064
- 51835 string characters out of 3182224
- 125844 words of memory out of 3000000
- 6634 multiletter control sequences out of 15000+200000
- 29258 words of font info for 61 fonts, out of 3000000 for 9000
+ 3565 strings out of 495064
+ 45745 string characters out of 3182224
+ 108857 words of memory out of 3000000
+ 6725 multiletter control sequences out of 15000+200000
+ 10109 words of font info for 23 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 30i,4n,21p,1727b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on cooperTechReview.dvi (1 page, 3088 bytes).
+ 27i,5n,32p,1095b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on problemStatement.dvi (4 pages, 9056 bytes).

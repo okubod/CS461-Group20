@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Purpose}{2}
+\contentsline {section}{\numberline {2}Current Progress}{2}
+\contentsline {section}{\numberline {3}Current Problems and Possible Solutions}{2}
+\contentsline {section}{\numberline {4}Summaries of Weekly Activities}{2}
+\contentsline {subsection}{\numberline {4.1}Week One}{2}
+\contentsline {subsection}{\numberline {4.2}Week Two}{2}
+\contentsline {subsection}{\numberline {4.3}Week Three}{3}
+\contentsline {subsection}{\numberline {4.4}Week Four}{3}
+\contentsline {subsection}{\numberline {4.5}Week Five}{3}
+\contentsline {subsection}{\numberline {4.6}Week Six}{3}
+\contentsline {subsection}{\numberline {4.7}Week Seven}{3}
+\contentsline {subsection}{\numberline {4.8}Week Eight}{3}
+\contentsline {subsection}{\numberline {4.9}Week Nine}{4}
+\contentsline {subsection}{\numberline {4.10}Week Ten}{4}
+\contentsline {section}{\numberline {5}Retrospective}{5}

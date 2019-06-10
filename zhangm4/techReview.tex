@@ -3,13 +3,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[cm]{fullpage}
 \usepackage[letterpaper, margin=0.75in]{geometry}
-\usepackage[singespacing]{setspace}
+\usepackage[singlespacing]{setspace}
 \usepackage[T1]{fontenc}
 \usepackage[]{graphicx}
 \usepackage[]{listings}
 \usepackage{rotating}
 \usepackage{amsmath}
-\usepackage{circuitikz}
+%\usepackage{circuitikz}
 \usepackage{titlesec}
 \usepackage{latexsym}
 \usepackage{enumerate}
@@ -18,7 +18,7 @@
 
 \titleformat{\section}
   {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-  
+
 \begin{document}
 
 \begin{titlepage}
@@ -37,7 +37,7 @@
 	{\large \today\par}
 \end{titlepage}
 
-\section*{About } 
+\section*{About }
 The aim of the project is to write a Mixed Reality (MR) application to help to build structure analyzing. In the screen of a display device, the application would overwrite the view of a given building and shows additional information about the building to designers or other users to help their work, also the file used in the application should be able to upload, download and shared from a data storage. \newline
 \noindent
 \newline
@@ -47,7 +47,7 @@ The content below is about data management part of the project, include correct 
 The file format defines how data list in a file and which element it contained.  MR application heavily relies on data to simulate “fake” reality and selecting a good file format would be crucial to success the project since it decides how the data is accessed. Also, the project is designed for average architecture designer and the file format should be commonly used amount them. \newline
 \noindent
 \newline
-For the project. the file format should: 1) The data is well organized and easy to access. 2) The file only contains relevant data. 3) The file is used in major construction modeling software like Autodesk. 
+For the project. the file format should: 1) The data is well organized and easy to access. 2) The file only contains relevant data. 3) The file is used in major construction modeling software like Autodesk.
 
 \subsection{Industry Foundation Classes}
 Industry Foundation Classes (IFC for short) describes how to represent buildings and infrastructure in a digital Format. It is an object-orientated format, in an IFC file, it first describes individual components as an object, like a piece of a building, a wall, then describes the relationship between each component, like connection, embedding, intersection, and many others. Those relations are designed to analyze structural systems, mechanical systems, and transportation systems, but needed to make 3d graphics too. Also, the file is easy to share with others and users can decide what they want to share within an IFC file. [1]\newline
@@ -114,15 +114,15 @@ For manage data, use a subset format from IFC would be best for the project sinc
 
 \pagebreak
 \section*{Citation:}
-[1] “Industry Foundation Classes Technical resources for software developers,” buildSmart. [Online]. 
-Available: http://www.buildingsmart-tech.org/ifc/  \newline 
+[1] “Industry Foundation Classes Technical resources for software developers,” buildSmart. [Online].
+Available: http://www.buildingsmart-tech.org/ifc/  \newline
 [2] “Wavefront .obj file,” Wikipedia, 27-Oct-2018. [Online]. Available:https://en.wikipedia.org/wiki/Wavefront$_.obj_$file. \newline
 [3] “Construction Management Software,” Autodesk BIM 360. [Online]. Available: https://bim360.autodesk.com/ \newline
 [4] “MongoDB for GIANT Ideas,” MongoDB. [Online]. Available: https://www.mongodb.com/ \newline
 [5] “Google Drive,” Wikipedia, 31-Oct-2018. [Online]. Available: https://en.wikipedia.org/wiki/Google$_$Drive \newline
 
 
-	
+
 
 \end{document}
 

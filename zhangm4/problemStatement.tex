@@ -3,13 +3,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[cm]{fullpage}
 \usepackage[letterpaper, margin=0.75in]{geometry}
-\usepackage[singespacing]{setspace}
+\usepackage[singlespacing]{setspace}
 \usepackage[T1]{fontenc}
 \usepackage[]{graphicx}
 \usepackage[]{listings}
 \usepackage{rotating}
 \usepackage{amsmath}
-\usepackage{circuitikz}
+%\usepackage{circuitikz}
 \usepackage{titlesec}
 \usepackage{latexsym}
 \usepackage{enumerate}
@@ -17,7 +17,7 @@
 
 \titleformat{\section}
   {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-  
+
 \begin{document}
 
 \begin{titlepage}
@@ -38,31 +38,31 @@
 \end{titlepage}
 \section*{Project abstract }\bigskip
 	The project is designed to improve the current construction maintenance process, and the aim is by creating fictional objects in the physical world to simulate the construction process, which could use to improve it. Mixed reality is ways to simulate 3D object in the real world. It needs to make a stander model about real objects and simulate the interaction between them based on physic rules. The technique provides a detailed information to its user, compared with the 2D graph like the blueprint, and has lots of benefits in design and maintenance process. The article below will discuss a start point to explore the usage of mixed reality and provides a possible use case of it.
-	
+
 \section*{Description of the problem}
     \bigskip
     The current construction maintenance process is heavily relayed on the 2d graph, such as blueprint. Construction workers usually start their work by reading and analyzing sets of given blueprints and come up with a plan for rest of work. But working with 2d graph gives the worker very high requirements, they need to have a relative knowledge and great special imagination, which needs years of learning and training. Also, the 2D graph makes building or maintenance process easy to generate errors. Highway 19 Overpass is one example that badly using 2D graph. \newline \par
-    
+
     Using blueprint in construction business was the only choice in some time, but along with graphics technic development and more powerful GPU and CPU, a new concept, mixed reality, is emerged and gives construction designer and worker a new way to do their work. Mixed reality is a way to embed a digital 3D image into the real world, which offers a more detailed way to display digital information like a graph, and it is possible to generate new and better methods in construction design and maintenance process. And the project is aiming to explore the possibility to apply mixed reality software and devices to construction maintenance process.\newline \par
-    
+
     To start the work, we need to solve several problems. The first one is data gathering. The software design usually starts at understanding its target, in the project, we need to gather all possible data form build, construction tools and maintenance process, and decide which part is needed in later. Then we need to find all possible resources, such as open source code, platform, and relative devices. Microsoft and other companies have work on the field in years and already have some successful products. Using all the help we can get would crucial to our success. The third one is how the construction worker would like if we finish the project, at least the project is aimed to reduce their worker.\newline \par
 
 
 \section*{Proposed solution }
     \bigskip
     To accomplish the goal that improving the current construction maintenance process, we plan to design and implement a program that 1.able to project 3D image into real world, including the construction, tool, and work environment(option), 2.allow people to manipulate the 3D object like rotation and transform by hand or keyboard and others, and get information of it by operation like double touch, 3.simulate interaction between objects when their status is changed and prevent illegal operation.\newline \par
-    
+
     For the project, it is best to start at a small and simple situation, like build an apartment. In the ideal version of our final draft, we should able to rebuild all item appeared in the construction sense and allow people to operate at them freely. Besides a working program, we also aim to create a stander 3D model pattern that all 3D objects in our database have the collection of data, which could be reused when we expend the project.\newline \par
-    
+
     For the method of projecting image, we have three option, the first one is on a cell phone or tabulates screen, which could gather the environment information by a camera and simulate mix reality in the screen. This method is applied in several games and apps and is easy to implement, but the user interaction is limited and has high risk been rejected by possible users.  The second operation is using a glass like devices. Microsoft and some companies already have published those devices in the market, and we think it is the best option for us. It has great user interaction and let the image displayed to users like a real object. Also, most researches about mix reality are using such devices, and such experience and product would benefit our project a lot. The third one is the Holographic projector, we believe this device is the best fit for our project, it could reconstruct the environment and allow users to interact with it freely. But there is not much usable example about it, and we may do some research if we have chances.\newline \par
 
 
 \section*{Performance metrics }
     \bigskip
     For the project, we aim to develop a working prototype that able to project the 3d image into physical reality and allow the user to interact with the object like a real one. And there is some detailed requirement for the prototype.\newline \par
-    
+
     First is for the user. The program should project the object like a real one, and projection should not only look like the original object but also match in a precise size. The project is designed to accomplish a specific task which requires a high precision rate and some fault would cause serious errors, which is one motivation to the project. Also, the user should able to interact without delay, and able to move it without limitation. And the program should warn the user if he or she makes illegal operation.\newline \par
-    
+
     And for the program. It should be bug-free, for now, we only run on our devices, and it may not compatible with other devices, which we will work later. And the way we create the 3D object should be simple and repeatable, which is the goal for the program, make it used in everywhere needed. Also, for testing purpose, the program should give feedback to track the running status. And since it is a graphic technic, we should heavily rely on GPU, which is good at simulation operation.\newline \par
 
 \end{document}
