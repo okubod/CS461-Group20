@@ -1,0 +1,103 @@
+\documentclass[10pt,draftclsnofoot,onecolumn]{IEEEtran}
+\usepackage{cite}
+\title{Mixed Reality Interface for Infrastructure Maintenance}
+\author{Christopher Cooper, CS461-001, Fall 2018}
+\date{October 2018}
+\begin{document}
+
+	\maketitle
+
+
+	\newpage
+	\section*{Problem in Maintenance Efficiency}
+
+	New technologies in mixed reality, from here on refered to as MR,
+	can provide new ways for those performing maintenance on infrastructure
+	(roads, bridges, etc.). MR is a virtual space where real objects
+	or people are integrated into a virtual environment and can co-exist and
+	interact with the virtual objects in real time~\cite{MRdef}. Mixed reality
+	provides users a way to take advantage of graphical computer processes and
+	models without interfering with their vision of the environment and task at
+	hand.
+
+	In infrastructure maintenance, the scale of projects can be quite large and
+	costly. This has led to wide use of Building Information Modelling in
+	construction. Building Information Modeling is the process of the generation
+	and management of information for construction projects~\cite{BIM}.
+	The idea was introduced in the 70s under the name Building Description
+	System but it has recently seen wide spread adoption in construction
+	~\cite{BIM}. With the increased use of Building Information Modelling in
+	construction, the main problem lies in the fact that existing structures
+	can't be modeled in the same way~\cite{3DModelInf}. While the idea of a 3D
+	model for a construction project is useful, the individuals performing the
+	maintenance must constantly check with the model in order to make any use
+	of it.
+
+	\section*{A Solution in Mixed Reality}
+
+	The proposed solution is to create an MR interface to allow maintanance
+	professionals working on infrastructure to provide data and see a graphical
+	display of the maintenance required, anchored to the real environment.
+	It is intended to give the maintenance professionals a way to visually
+	observe and intuitively interact with the data gathered on the repair area.
+	This is in hopes of improving the overall speed and efficiency of the overall
+	maintenance process, allowing more work to be done in less time and with
+	minimal wasted resources.
+
+	In addition, information on possible extensions to the system, or other
+	problems in maintenance that MR could solve is desired. This would provide
+	faster prototyping of future MR applications regarding infrastructural
+	maintenance.
+
+	The proposed software would comprise of two components: the interface for
+	inputting data and manipulating digital elements, and the 3d representation
+	of the data overlaying the environment. Both of these would be achieved
+	using the Microsoft HoloLens or similar device that would allow interaction
+	with the digital components using voice and hand gestures.
+
+	\subsection*{The User Interface}
+
+	The user interface would primarily be handled by gestures for controlling
+	the orientation and location of digital models with minimal menus to
+	control modes of the software such as inputing data or manipulation of the
+	3D model. Manual data input would be handled with voice commands to easily
+	convey to the program what type of data you are entering as well as the
+	quantity without searching through complex menus.
+
+	Data would also have the option to be input via upload from file. This is
+	to handle any precompiled data that is in large quantities that would be
+	undesirable to input manually.
+
+	\subsection*{The 3D Model}
+
+	The 3D model itself must anchor itself to a specified location that does
+	not rely on constant visual contact with the area so that workers would not
+	need to constantly reset the model orientation every time they reach for a
+	tool or otherwise avert their gaze. In addition, the 3D model must have
+	multiple viewing modes to allow workers to switch between seeing a solid
+	representation of the desired end result and a more transparent view to not
+	obstruct their line of sight in a convenient manner.
+
+	In addition to the model of the actual structure, data should also be
+	viewable visually in the form of a chart if such information should be
+	necessary.
+
+	\section*{Performance Metrics}
+
+	At the end of the successful project there will be two deliverables, a
+	functional prototype of the software and a report of the research regarding
+	specific strategies to designing mixed reality solutions found in order
+	to aid in future development of improved software.
+
+	The prototype would include a functional interface utilizing both voice and
+	gesture comands in an intuitive manner and 3D models generated from input
+	data that anchors to the environment.
+	The report would include descriptions of developed ideas that were and were
+	not included in the delivered prototype with explanations of their
+	respective viabilities in practice. This report would help understand the
+	limitations of current mixed reality technology.
+
+	\newpage
+\bibliography{probstatebib}{}
+\bibliographystyle{IEEEtran}
+\end{document}
