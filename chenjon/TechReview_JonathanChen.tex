@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+%
+% Technical Review by Jonathan Chen
+%
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%   TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{Tech Review Document}\\ % Title
+Team 20: xRLucid} % Subtitle
+
+\author{\textsc{Austin Liang, Chris Cooper, David Okubo, Jonathan Chen, Mingyu Zhang} % Author
+\\{\textit{Oregon State University}}} % Institution
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%   ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+\begin{abstract}
+Project Team 20 is working on Mixed Reality for Infrastructure Maintenance. The end product should be able to help engineers understand blueprints and construction plans for infrastructure by overlaying them onto real-world objects using a mobile device. There are many key features that will not only help the software function properly, but also help the user understand the program better. User Interface (UI) is crucial in its contribution to the overall usability of the software. UI is also a very useful tool in preventing errors that could be caused by the user.
+\end{abstract}
+
+\hspace*{3,6mm}\textit{Keywords:} BIM, 3D Rendering, Vulkan, OpenGL, Metal, API % Keywords
+
+\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%   ESSAY BODY
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Introduction}
+In this project Mixed Reality for Infrastructure Maintenance, users will be using a mobile device to view 3D models being overlayed onto real-world objects. The user will need to download and import a BIM file from the BIM 360 database, then set an anchor point to keep the overlay in place. This can be difficult to figure out when using the application for the first time, and user interface is incredibly important to make steps and actions very clear. Organization of the interface can make the application confusing or intuitive, especially with many steps being required to accomplish the main feature of the project.
+
+
+%------------------------------------------------
+
+\section{User Interface Organization: presenting a user-friendly application}
+    \subsection{User Experience} According to Peter Morville's "User Experience Design", there are seven parts to user experience; Useful, Usable, Desirable, Findable, Accessible, Credible, and Valuable [2]. Ideally, our UI system would be minimal, while showing enough information to be easy to use. There is also another approach called User-Centered Design, it focuses on identifying who the intended users are, as well as what they're using the application for [1]. This helps the developer design the application without unnecessary information.
+    \subsection{Efficiency} The User Interface (UI) shouldn't be cluttered. It should very efficient, so that the user has enough to figure out how to use the application without feeling overwhelmed from too much clutter. The UI needs to have enough displayed to access and accomplish all of the features of the application. Understanding who will be using the application can assist in eliminating too much information [1]. The developer won't have to explain too much of the purpose of the application, and can assume that the user would know at least a basic amount of knowledge to understand. 
+    \subsection{Useful} UI should have a purpose, even if it is efficient, there shouldn't be any extra, unnecessary functions. All of the parts of Morville's User Experience article must all be in check in order for the whole User Interface to function correctly [2]. There are scenarios when a user might not have a sufficient understanding of what the application is supposed to be used for, this is where a specific UI would be more useful. The application's interface could be used to teach the user about important information, information such as; the purpose of the application, the requirements, and how to use it. 
+
+
+%------------------------------------------------
+\section{User Interaction Method}
+    \subsection{Organization} Our main menu of features needs to be easy to navigate and interact with. Since we need the user to download a file from the BIM 360 database before using the application, we'll ask them to download the file before showing them the rest of the software features. This emphasizes the importance of the file, and doesn't overwhelm the user with all of the features that will be displayed after the file is imported. The application also needs the file downloaded and imported before any of the features become useful. We would want it to be as straight-forward as possible.
+    \subsection{Interaction} Once the 3D model is overlayed on the real-world objects, the user should be able to easily interact with objects and view details on specific components with an interface that isn't too cluttered. We need just enough features shown to interact with the object, only the features that can be applied in that current situation.
+    \subsection{Object Editing} Just like the previous section, editing objects and updating them to the BIM 360 database should be efficient, and the user interface has a large impact on that feature. Interacting with objects is one of the most important features in this application. It should feel natural, and it is important to be running correctly. The interface needs to provide all of the necessary information while also being clean enough to not block the view of the object.
+
+\subsection{User Interface Toolkit: UI libraries}
+    \subsection{Onsen UI} This UI library is used with mobile applications. It's compatible with Android and iOS, and runs very well on each device. This provides a strong framework that also runs smoothly. Developer features include; remote builds that allow for remote updates, and a debugger which helps with testing changes made to the application. There are also a lot of adjustable settings that can change the appearance while using the application [3].
+    \subsection{Framework7} An Open-Source UI library that is easy learn and start developing with, however it is only usable with iOS. While we do want to develop on iOS, it would be much easier to use one UI for both Android and iOS. This UI framework does take advantage of iOS features that would give iOS users a more efficient UI. The open-source quality would also give a lot of flexibility for our application [4].
+    \subsection{Flutter} All versions are uploaded to GitHub, and compatible with Android and iOS. A very useful feature is the fast development, any changes made can be reloaded onto a virtual testing device. The user can make changes and see how those changes affect the app near instantly, this makes debugging very efficient and helps keep track of changes being made [5].
+
+%------------------------------------------------
+
+
+\section{Conclusion}
+    User interface is a crucial part of any application or software, especially one that requires a lot of user input and interaction. This is exactly what our project would need, and there are a lot of resources to developing an efficient interface. Fortunately, we also have access to graduate students that can test our application. Their insight would be a very useful addition to our research on the topic, as they are part of the intended audience. Many mobile application development softwares have a built-in User Interface editor. They have plenty of templates, as well as ways to manipulate how the interface is interacted with. Fortunately, this makes the emphasis on UI much easier to develop while the rest of the features are implemented. Flutter would be the ideal SDK to use for our application since it is compatible with iOS and Android, and can reload the test build very quickly.
+
+\newpage
+
+
+%----------------------------------------------------------------------------------------
+%   BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{unsrt}
+\section{References}
+%\hangindent=10mm\hangafter=0\noindent  \par
+    [1] Usability.gov. (2018). User-Centered Design Basics. [Online] Available at: https://www.usability.gov/what-and-why/user-centered-design.html [Accessed 9 Nov. 2018]. \newline
+    [2] Morville, P. (2004). User Experience Design. [Online] Semantic Studios. Available at: http://semanticstudios.com/ \newline user\_experience\_design/ [Accessed 2 Nov. 2018]. \newline
+    [3] Onsen UI. (2018). Onsen UI 2: Beautiful HTML5 Hybrid Mobile App Framework and Tools. [Online] Available at: https://onsen.io/ [Accessed 2 Nov. 2018]. \newline
+    [4] Framework7. (2018). Framework7 - Full Featured Mobile HTML Framework For Building iOS \& Android Apps. [Online] Available at: https://framework7.io/ [Accessed 2 Nov. 2018]. \newline
+    [5] Flutter. (2018). Flutter - Beautiful native apps in record time. [Online] Available at: https://flutter.io/ [Accessed 2 Nov. 2018].
+\bibliography{sample}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
